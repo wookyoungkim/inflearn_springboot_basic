@@ -1,5 +1,6 @@
 package hello.hellospirng;
 
+import hello.hellospirng.aop.TimeTraceAOP;
 import hello.hellospirng.repository.*;
 import hello.hellospirng.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,11 @@ public class SpringConfig {
     public MemberService memberService() {
         return new MemberService(memberRepository);
     }
+
+//    @Bean
+//    public TimeTraceAOP timeTraceAOP() {
+//        return new TimeTraceAOP();
+//    }
 
 //    @Bean
 //    public MemberRepository memberRepository() {
